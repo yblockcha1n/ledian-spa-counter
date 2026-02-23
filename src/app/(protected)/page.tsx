@@ -8,7 +8,7 @@ import type { Visit } from "@/lib/types";
 import { STORE_LABELS } from "@/lib/constants";
 
 export default function DashboardPage() {
-  const { user, loading: authLoading, logout } = useAuth();
+  const { loading: authLoading, logout } = useAuth();
   const [visits, setVisits] = useState<Visit[]>([]);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
@@ -38,7 +38,7 @@ export default function DashboardPage() {
     <>
       {/* Sticky Header */}
       <header
-        className="sticky z-10 bg-base border-b border-border"
+        className="sticky z-50 bg-base border-b border-border"
         style={{ top: "env(safe-area-inset-top)" }}
       >
         <div className="max-w-lg mx-auto px-5 pt-5 pb-4 flex items-start justify-between">
