@@ -35,27 +35,33 @@ export default function DashboardPage() {
   };
 
   return (
-    <main className="max-w-lg mx-auto px-5 py-8">
-      {/* Header */}
-      <div className="flex items-start justify-between mb-8">
-        <div>
-          <p className="text-xs tracking-[0.3em] text-text-muted uppercase mb-1">Welcome back</p>
-          <h1
-            className="text-3xl font-light tracking-[0.2em] text-text"
-            style={{ fontFamily: "var(--font-cormorant)" }}
+    <>
+      {/* Sticky Header */}
+      <header
+        className="sticky z-10 bg-base border-b border-border"
+        style={{ top: "env(safe-area-inset-top)" }}
+      >
+        <div className="max-w-lg mx-auto px-5 pt-5 pb-4 flex items-start justify-between">
+          <div>
+            <p className="text-xs tracking-[0.3em] text-text-muted uppercase mb-1">Welcome back</p>
+            <h1
+              className="text-3xl font-light tracking-[0.2em] text-text"
+              style={{ fontFamily: "var(--font-cormorant)" }}
+            >
+              LEDIAN SPA
+            </h1>
+            <div className="w-6 h-px bg-accent mt-2" />
+          </div>
+          <button
+            onClick={logout}
+            className="text-xs text-text-muted hover:text-text transition-colors mt-1"
           >
-            LEDIAN SPA
-          </h1>
-          <div className="w-6 h-px bg-accent mt-2" />
+            ログアウト
+          </button>
         </div>
-        <button
-          onClick={logout}
-          className="text-xs text-text-muted hover:text-text transition-colors mt-1"
-        >
-          ログアウト
-        </button>
-      </div>
+      </header>
 
+      <main className="max-w-lg mx-auto px-5 py-6">
       {/* Stats */}
       <div className="grid grid-cols-3 gap-3 mb-6">
         <StatCard label="来店回数" value={`${visits.length}`} unit="回" />
@@ -124,6 +130,7 @@ export default function DashboardPage() {
         </svg>
       </Link>
     </main>
+    </>
   );
 }
 

@@ -26,6 +26,9 @@ const notoSansJP = Noto_Sans_JP({
 export const metadata: Metadata = {
   title: "LEDIAN SPA LOG",
   description: "LEDIAN SPA 来店記録・料金計算アプリ",
+  icons: {
+    icon: "/icon-color.svg",
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
