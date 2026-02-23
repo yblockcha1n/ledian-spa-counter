@@ -40,7 +40,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-base px-6">
+    <div className="flex items-center justify-center bg-base px-6" style={{ minHeight: "100dvh", paddingTop: "env(safe-area-inset-top)" }}>
       <div className="w-full max-w-sm">
         {/* Logo */}
         <div className="text-center mb-12">
